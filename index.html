@@ -5,13 +5,6 @@
     <title>Birthday Cake 🎂</title>
     <link rel="shortcut icon" href="#" />
     <style>
-      body {
-        font-size: 18px;
-        font-family: "courier"; /*"Lucida Console", Courier, monospace;*/
-        background-color: black;
-        color: white;
-      }
-
       button {
         font-size: 18px;
         font-family: "courier";
@@ -26,7 +19,9 @@
       }
 
       #start {
-        background-color: green;
+        background-color: rgb(32, 168, 202);
+        font-size: 24px;
+        font-weight: bold;
       }
 
       #startconsoledebug {
@@ -54,7 +49,10 @@
       }
 
       body {
-        background-color: #333;
+        background-color: rgb(101, 180, 58);
+        background-image: url("./2730.jpg");
+        /* background-size: cover; */
+        font-family: sans-serif;
       }
 
       .cake {
@@ -62,6 +60,15 @@
         width: 250px;
         height: 200px;
         top: 50%;
+        left: 50%;
+        margin-top: -70px;
+        margin-left: -125px;
+      }
+      .gift {
+        position: absolute;
+        width: 250px;
+        height: 200px;
+        top: 80%;
         left: 50%;
         margin-top: -70px;
         margin-left: -125px;
@@ -260,9 +267,11 @@
   </head>
 
   <body class="text-center">
-    <h1>Birthday Cake 🎂</h1>
+    <h1>🎂 بیا تولد بازی کنیم 😉</h1>
     <br />
-    <button style="cursor: pointer" id="start">شمع رو روشن کن</button>
+    <button style="cursor: pointer; border-radius: 8px" id="start">
+      🔥 بزن روشن شه
+    </button>
     <button style="display: none" id="startconsoledebug">
       enable console logs
     </button>
@@ -272,7 +281,9 @@
     <br />
     <br />
     <div id="cake-holder" style="opacity: 0">
-      <p>حالا تو میکروفون گوشیت فوت کن 😉</p>
+      <p style="font-weight: bold; font-size: 24px">
+        حالا تو میکروفون🎙گوشیت فوت کن 😉
+      </p>
       <div class="cake">
         <div class="plate"></div>
         <div class="layer layer-bottom"></div>
@@ -287,23 +298,26 @@
         </div>
       </div>
       <div class="text-center">
-        <h5 class="cake-off">❣ تولدم مبارک ❣</h5>
-        <p class="cake-off">❤ ممنون بابت فوت و تبریکت ❤</p>
+        <h5 style="font-weight: bold; font-size: 24px" class="cake-off">
+          🎈🎈🎉🎉 🎉❣ تولدم مبارک ❣🎉🎉🎉🎈🎈
+        </h5>
       </div>
     </div>
     <!--
 	<canvas id="meter" width="500" height="50"></canvas>
 -->
-
+    <div id="cake-holder" class="gift">
+      <h5 style="font-weight: bold; font-size: 24px">
+        🎁کسی هم خواست کادو بده بهم بگه<br />
+        <br />
+        🤳 آدرس بدم بفرسته
+      </h5>
+    </div>
     <script src="cake.js"></script>
-    <script>
-      alert("دسترسی به میکروفون رو بده🎤");
-    </script>
     <script src="volume-meter.js"></script>
     <script src="audioDetectionConfig.js"></script>
     <script src="audioDetection.js"></script>
     <script src="audioStream.js"></script>
-
     <script src="demoAudioRecorder.js"></script>
     <script src="demoAudioDetectionListeners.js"></script>
     <script src="demo.js"></script>
